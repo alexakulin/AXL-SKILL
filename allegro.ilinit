@@ -1,0 +1,27 @@
+;
+; This example file shows how to load Skill files (those with the
+; 	extension ".il" in the current directory.
+; To use copy to allegro.ilinit if to be used by all Allegro based programs
+; or <programName>.ilinit if intended for only one program
+;
+; Setting Allegro environment variable, LoadSkillFilesDebug will turn
+; on printing the name of each file as it is loaded.
+
+
+unless(boundp('LoadSkillFilesDebug) 
+	LoadSkillFilesDebug = axlGetVariable("LoadSkillFilesDebug"))
+
+
+when(LoadSkillFilesDebug printf("\n"))
+(foreach file (rexMatchList "\\.il$" (getDirFiles "."))
+      when(LoadSkillFilesDebug printf("Loading Skill file: %s\n" file))
+      (load strcat("./" file))
+)
+
+; Load any ini files (containing axlCmdRegister)
+(foreach file (rexMatchList "\\.ini$" (getDirFiles "."))
+      when(LoadSkillFilesDebug printf("Loading Skill file: %s\n" file))
+      (load strcat("./" file))
+)
+when(LoadSkillFilesDebug printf("\n"))
+
