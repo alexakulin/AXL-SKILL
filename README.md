@@ -13,7 +13,7 @@ Every program here is supposed to achieve certain function, or play as a module.
 
 ## CONTENTS
 
-- allegro.ilinit - load all skill files at start (put it in %HOME/pcbenv)
+- allegro.ilinit - load all skill files at start (put it in %HOME%/pcbenv)
 - grids - interactive grid control form
 - set_target - interactively set the target in the matchgroup by pick in the canvas
 - addeskd - add ESKD-compatible (Russian standard) Cyrillic text to the canvas
@@ -24,6 +24,7 @@ Every program here is supposed to achieve certain function, or play as a module.
 Put the *allegro.ilinit* file and required skill files to the %HOME%/pcbenv folder,
 or to the %CDS_SITE%/pcb/skill folder, and restart Allegro PCB Editor.
 HOME is the system variable which shows your "home" path for the PCB Editor.
+In Windows use %HOME% in the File Explorer to open this folder.
 CDS_SITE is the system variable which shows your "site settings" path.
 When Allegro PCB Editor starts, it looks into these folders for *allegro.ilinit* file,
 and if it exists it will be loaded and should start the required scripts from the folder.
