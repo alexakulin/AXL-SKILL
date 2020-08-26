@@ -39,7 +39,7 @@ You are welcome to suggest the changes and improvements for these scripts.
 Creates the permanent form which allows to see the current grid setting
 and to choose the new grid value by single click.
 
-*Advantage:* you can see the current grid value and you can quickly change it.
+*Advantage:* you can always see the current grid value and you can quickly change it by pick.
 
 ### set_target - interactively set the target in the matchgroup by pick
 
@@ -62,17 +62,14 @@ in local language, Russian, German or almost any other.
 ### set_net_color - set the net color by pick
 
 You can change the color of the net, one by one,
-selecting the color by pick in the dialog box, then selecting the net trace (cline).
-This is useful if you want to separate the nets using colors.
-The command is interactive so you can use it while routing.
+selecting the color by pick in the dialog box, then selecting the net trace (cline),
+pins or shapes. You can use the temp group and then the window to select multiple objects.
+This is useful if you want to separate the nets visually using different colors.
 
 *Advantage:* you can quickly and easily set the net color just by pick
 with a compact dialog box with wide color selection.
-
-*Recommendation:* Check-off the Capture setting: 
-
-*Options - Preferences - More preferences - Design and Libraries - Enable Global Net ITC*
-
-to avoid the opening of multiple Capture pages during the net selection in PCB.
-
+Please notice that the cross-probe with Capture doesn't create
+any problems when you select the "global" nets. When you use
+the standard net color function of Allegro, the Capture will open all pages
+containing the selected "global" net.
 
